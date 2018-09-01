@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#btn").click(function(){
+		//jQuery操作ajax
+		var username=$("#id").val();
+		$.get("/test","username="+username,function(result){
+			if(rersult){
+				//jQuery用html来获取与设置元素中的惠html内容
+				$("#info").html("能用");
+			}else{
+				
+				$("#info").html("不能用");
+			}
+			 
+		});
+	})
+	
+})
+ 
+</script>
+</head>
+<body>
+<button id="btn">点我</button>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery/jquery-1.8.3.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	$("#cloneBtn").click(function(){
+		
+		$("#mybtn").clone(true).appendTo("#div2")
+	})
+	$("#mybtn").click(function(){
+		alert("0");
+	})
+})
+
+</script>
+<style type="text/css">
+      div{
+          height: 200px;
+          border: 2px dashed red;
+          margin: 5px;
+      }
+</style>
+
+</head>
+<body>
+<button id="cloneBtn">克隆</button>
+<div id="div1">
+<button id="mybtn">特效</button>
+</div>
+<div id="div2"></div>
+</body>
+
+</html>
